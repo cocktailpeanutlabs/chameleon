@@ -56,13 +56,22 @@ module.exports = {
         ]
       }
     },
-    //  Uncomment this step to add automatic venv deduplication (Experimental)
     {
-      method: "fs.link",
+      method: "shell.run",
       params: {
-        venv: "app/env"
+        path: "app/chameleon/viewer/frontend",                // Edit this to customize the path to start the shell from
+        message: [
+          "npm install"
+        ]
       }
     },
+    //  Uncomment this step to add automatic venv deduplication (Experimental)
+//    {
+//      method: "fs.link",
+//      params: {
+//        venv: "app/env"
+//      }
+//    },
     {
       method: "notify",
       params: {

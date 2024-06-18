@@ -31,6 +31,13 @@ module.exports = {
         url: "{{input.event[0]}}"
       }
     },
+    {
+      method: "shell.run",
+      params: {
+        path: "app/chameleon/viewer/frontend",
+        message: "npm start"
+      }
+    },
 //    Uncomment this step to enable local wifi sharing (access the app from devices on the same network)
 //    {
 //      method: "proxy.start",
