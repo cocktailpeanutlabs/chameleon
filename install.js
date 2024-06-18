@@ -12,7 +12,7 @@ module.exports = {
     {
       method: "fs.rm",
       params: {
-        path: "data"
+        path: "app/data"
       }
     },
     {
