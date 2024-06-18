@@ -9,6 +9,21 @@ module.exports = {
         ]
       }
     },
+    {
+      method: "fs.rm",
+      params: {
+        path: "data"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        path: "app",
+        message: [
+          "git clone --depth 1 https://huggingface.co/cocktailpeanut/noelemahc data"
+        ]
+      }
+    },
     // Delete this step if your project does not use torch
     {
       method: "script.start",
@@ -34,12 +49,12 @@ module.exports = {
       }
     },
     //  Uncomment this step to add automatic venv deduplication (Experimental)
-    //  {
-    //    method: "fs.link",
-    //    params: {
-    //      venv: "app/env"
-    //    }
-    //  },
+    {
+      method: "fs.link",
+      params: {
+        venv: "app/env"
+      }
+    },
     {
       method: "notify",
       params: {
