@@ -41,7 +41,7 @@ module.exports = {
       method: "shell.run",
       params: {
         venv: "../env",                // Edit this to customize the venv folder path
-        path: "app/chameleon",                // Edit this to customize the path to start the shell from
+        path: "app",                // Edit this to customize the path to start the shell from
         message: [
           "pip install -e ."
         ]
